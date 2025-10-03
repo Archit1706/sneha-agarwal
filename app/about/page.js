@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,11 +22,56 @@ export default function About() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen pt-20 bg-gradient-to-br bg-[#FAF8F1]">
+            <main className="min-h-screen pt-20 bg-[#FAF8F1] relative overflow-hidden">
+                {/* Grid Background Overlay */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                        className="absolute inset-0 opacity-[0.04]"
+                        style={{
+                            backgroundImage: `linear-gradient(#34656D 1px, transparent 1px), linear-gradient(90deg, #34656D 1px, transparent 1px)`,
+                            backgroundSize: '50px 50px'
+                        }}
+                    />
+                    {/* Animated Light Rays */}
+                    <motion.div
+                        className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-[#FAEAB1]/30 to-transparent"
+                        animate={{
+                            x: ['-100%', '100vw'],
+                            opacity: [0, 1, 1, 0]
+                        }}
+                        transition={{
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "linear",
+                            repeatDelay: 2
+                        }}
+                        style={{ filter: 'blur(20px)' }}
+                    />
+                    <motion.div
+                        className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-[#34656D]/20 to-transparent"
+                        animate={{
+                            x: ['100vw', '-100%'],
+                            opacity: [0, 1, 1, 0]
+                        }}
+                        transition={{
+                            duration: 10,
+                            repeat: Infinity,
+                            ease: "linear",
+                            repeatDelay: 3,
+                            delay: 1.5
+                        }}
+                        style={{ filter: 'blur(25px)' }}
+                    />
+                </div>
                 {/* Hero Section */}
-                <section className="py-20">
+                <section className="py-20 relative z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-16 animate-fade-in">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-center mb-16"
+                        >
                             <h1 className="text-5xl md:text-6xl font-bold mb-6">
                                 <span className="bg-gradient-to-r from-[#34656D] to-[#334443] bg-clip-text text-transparent">
                                     About Me
@@ -34,68 +80,48 @@ export default function About() {
                             <p className="text-xl text-[#334443]/70 max-w-3xl mx-auto">
                                 Get to know more about my journey, skills, and what drives me
                             </p>
-                        </div>
+                        </motion.div>
 
                         {/* Tab Navigation */}
-                        <div className="flex justify-center mb-12">
-                            <div className="inline-flex bg-white rounded-full p-1 shadow-lg border border-[#FAEAB1]">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2, duration: 0.6 }}
+                            className="flex justify-center mb-12"
+                        >
+                            <div className="inline-flex bg-white/70 backdrop-blur-lg rounded-full p-1 shadow-lg border border-white/40">
                                 {["about", "education", "skills"].map((tab) => (
-                                    <button
+                                    <motion.button
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
                                         className={`px-8 py-3 rounded-full font-semibold capitalize transition-all duration-300 ${activeTab === tab
                                             ? "bg-gradient-to-r from-[#34656D] to-[#334443] text-white shadow-lg"
                                             : "text-[#334443]/70 hover:text-[#334443]"
                                             }`}
                                     >
                                         {tab}
-                                    </button>
+                                    </motion.button>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Tab Content */}
-                        <div className="animate-slide-in">
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4 }}
+                        >
                             {activeTab === "about" && <AboutSection />}
                             {activeTab === "education" && <EducationSection />}
                             {activeTab === "skills" && <SkillsSection />}
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
             </main>
             <Footer />
-
-            <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slide-in {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out;
-        }
-
-        .animate-slide-in {
-          animation: slide-in 0.5s ease-out;
-        }
-      `}</style>
         </>
     );
 }
@@ -107,14 +133,14 @@ function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Side - Bio */}
             <div className="space-y-6">
-                <div className="bg-white rounded-2xl p-8 shadow-xl border border-[#FAEAB1]/50">
+                <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/40 hover:shadow-2xl transition-all">
                     <h2 className="text-3xl font-bold mb-6 text-[#334443]">
                         My Story
                     </h2>
                     <p className="text-[#334443]/80 leading-relaxed text-lg mb-6">
                         {personalInfo?.about?.description}
                     </p>
-                    <div className="pt-6 border-t border-[#FAEAB1]">
+                    <div className="pt-6 border-t border-white/30">
                         <p className="text-[#34656D] italic">
                             "{personalInfo?.bio}"
                         </p>
@@ -124,13 +150,13 @@ function AboutSection() {
 
             {/* Right Side - Interests & Hobbies */}
             <div className="space-y-6">
-                <div className="bg-gradient-to-br from-[#34656D] to-[#334443] rounded-2xl p-8 shadow-xl text-white">
+                <div className="bg-gradient-to-br from-[#34656D]/90 to-[#334443]/90 backdrop-blur-lg rounded-2xl p-8 shadow-xl text-white border border-white/20 hover:shadow-2xl transition-all">
                     <h3 className="text-2xl font-bold mb-6">Interests</h3>
                     <div className="grid grid-cols-2 gap-4">
                         {personalInfo?.about?.interests?.map((interest, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all transform hover:scale-105"
+                                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/10"
                             >
                                 <p className="font-semibold">{interest}</p>
                             </div>
@@ -138,7 +164,7 @@ function AboutSection() {
                     </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-xl border border-[#FAEAB1]/50">
+                <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/40 hover:shadow-2xl transition-all">
                     <h3 className="text-2xl font-bold mb-6 text-[#334443]">
                         When I'm Not Working
                     </h3>
@@ -146,7 +172,7 @@ function AboutSection() {
                         {personalInfo?.about?.hobbies?.map((hobby, idx) => (
                             <div
                                 key={idx}
-                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#FAEAB1]/20 transition-colors"
+                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/60 transition-colors backdrop-blur-sm"
                             >
                                 <Circle className="w-2 h-2 fill-[#34656D] text-[#34656D]" />
                                 <p className="text-[#334443] font-medium">
@@ -167,7 +193,7 @@ function EducationSection() {
             {education?.map((edu, idx) => (
                 <div
                     key={idx}
-                    className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 animate-fade-in border border-[#FAEAB1]/50"
+                    className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 animate-fade-in border border-white/40"
                     style={{ animationDelay: `${idx * 0.1}s` }}
                 >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
@@ -192,7 +218,7 @@ function EducationSection() {
                         </div>
                     </div>
 
-                    <div className="border-t border-[#FAEAB1] pt-6">
+                    <div className="border-t border-white/30 pt-6">
                         <h4 className="text-lg font-semibold text-[#334443] mb-3">
                             Achievements & Highlights
                         </h4>
@@ -237,7 +263,7 @@ function SkillsSection() {
                         {category.skills.map((skill, i) => (
                             <div
                                 key={i}
-                                className="w-40 h-40 group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col items-center justify-center gap-4 border border-[#FAEAB1]/50"
+                                className="w-40 h-40 group bg-white/70 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col items-center justify-center gap-4 border border-white/40"
                             >
                                 <div className="w-16 h-16 flex items-center justify-center">
                                     {skill.logo ? (
@@ -255,7 +281,6 @@ function SkillsSection() {
                             </div>
                         ))}
                     </div>
-
                 </div>
             ))}
 
@@ -270,7 +295,7 @@ function SkillsSection() {
                     {skills?.certifications?.map((cert, idx) => (
                         <div
                             key={idx}
-                            className="bg-gradient-to-br from-[#34656D] to-[#334443] rounded-2xl p-8 shadow-xl text-white"
+                            className="bg-gradient-to-br from-[#34656D]/90 to-[#334443]/90 backdrop-blur-lg rounded-2xl p-8 shadow-xl text-white border border-white/20 hover:shadow-2xl transition-all"
                         >
                             <div className="flex items-start gap-4 mb-4">
                                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-3xl flex-shrink-0">

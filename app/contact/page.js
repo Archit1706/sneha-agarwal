@@ -56,6 +56,16 @@ export default function Contact() {
         <>
             <Navbar />
             <main className="min-h-screen pt-20 bg-[#FAF8F1]">
+                {/* Grid pattern overlay only */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div
+                        className="absolute inset-0 opacity-[0.04]"
+                        style={{
+                            backgroundImage: `linear-gradient(#34656D 1px, transparent 1px), linear-gradient(90deg, #34656D 1px, transparent 1px)`,
+                            backgroundSize: '50px 50px'
+                        }}
+                    />
+                </div>
                 <section className="py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         {/* Header */}
