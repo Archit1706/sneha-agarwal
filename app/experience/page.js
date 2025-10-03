@@ -138,7 +138,7 @@ function ExperienceCard({ exp, index }) {
                         <p className="text-xl text-[#34656D] font-semibold mb-1">
                             {exp.company}
                         </p>
-                        <div className="flex flex-wrap items-center gap-4 text-[#334443]/60 text-sm">
+                        <div className="flex flex-wrap items-center gap-4 text-[#334443]/60 text-base">
                             <span className="flex items-center gap-1">
                                 <MapPin className="w-4 h-4" />
                                 {exp.location}
@@ -187,14 +187,14 @@ function ExperienceCard({ exp, index }) {
 
                 {/* Technologies */}
                 <div>
-                    <p className="text-sm text-[#334443]/60 mb-3 font-semibold">
+                    <p className="text-base text-[#334443]/60 mb-3 font-semibold">
                         Technologies Used:
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech, idx) => (
                             <span
                                 key={idx}
-                                className="px-4 py-2 bg-[#FAEAB1]/30 text-[#334443] rounded-full text-sm font-medium hover:bg-[#FAEAB1]/50 transition-colors"
+                                className="px-4 py-2 bg-[#FAEAB1]/30 text-[#334443] rounded-full text-base font-medium hover:bg-[#FAEAB1]/50 transition-colors"
                             >
                                 {tech}
                             </span>
