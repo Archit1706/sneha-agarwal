@@ -1,0 +1,8 @@
+/*
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://ca-sneha-agarwal.vercel.app/sitemap.xml
+*/
