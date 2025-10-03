@@ -18,20 +18,21 @@ export const personalInfo = {
         description: "As a Chartered Accountant with comprehensive experience in financial management, auditing, and compliance, I bring a unique blend of technical expertise and strategic thinking to every challenge. My journey has taken me from audit firms in India to research finance roles in the US, where I've consistently delivered measurable improvements in financial efficiency, fraud detection, and operational excellence. I'm passionate about leveraging data analytics and AI to transform financial operations and drive informed decision-making.",
 
         interests: [
-            "Financial Analytics",
+            "Financial Analytics & Modeling",
             "Fraud Detection & Forensic Accounting",
-            "Financial Modeling",
-            "Strategic Finance",
+            "Audit & Assurance",
+            "Strategic Finance & Planning",
             "Data-Driven Decision Making",
-            "AI in Finance"
+            "AI in Finance & Accounting"
         ],
 
         hobbies: [
             "Community Service & Volunteering",
-            "Event Management",
-            "Environmental Sustainability",
+            "Event Planning & Management",
+            "Environmental Sustainability Initiatives",
             "Healthcare Advocacy",
-            "Financial Literacy Education"
+            "Financial Literacy Education",
+            "Reading Financial Literature"
         ]
     }
 };
@@ -141,38 +142,41 @@ export const experiences = [
 
 export const skills = {
     technical: [
-        { name: "Financial Modeling", logo: "AreaChart" },
-        { name: "Data Analytics", logo: "BarChart3" },
-        { name: "Fraud Detection", logo: "Fingerprint" },
-        { name: "Financial Forecasting", logo: "TrendingUp" },
+        { name: "Financial Modeling", logo: "TrendingUp" },
+        { name: "Financial Analysis", logo: "BarChart3" },
+        { name: "Fraud Detection", logo: "Shield" },
+        { name: "Forecasting", logo: "LineChart" },
         { name: "Budget Management", logo: "Wallet" },
-        { name: "Risk Assessment", logo: "Scale" }
+        { name: "Risk Assessment", logo: "AlertTriangle" }
     ],
 
     languages: [
         { name: "US GAAP", logo: "FileText" },
         { name: "IFRS", logo: "Globe" },
-        { name: "Ind AS", logo: "Flag" },
-        { name: "Tax Codes", logo: "Scroll" },
-        { name: "VBA", logo: "Code" },
+        { name: "Ind AS", logo: "BookOpen" },
+        { name: "Tax Codes", logo: "FileBarChart" },
+        { name: "SOX Compliance", logo: "FileCheck" }
     ],
 
     frameworks: [
-        { name: "Valuation Methods", logo: "Coins" },
+        { name: "Valuation Methods", logo: "DollarSign" },
         { name: "M&A Due Diligence", logo: "Handshake" },
-        { name: "Costing & Inventory", logo: "Warehouse" },
-        { name: "Internal Controls (SOX)", logo: "Lock" },
+        { name: "Cost Accounting", logo: "Calculator" },
+        { name: "Internal Controls", logo: "Lock" },
+        { name: "Audit Procedures", logo: "ClipboardCheck" }
     ],
 
     tools: [
         { name: "SQL", logo: "Database" },
-        { name: "Power BI", logo: "LayoutPanel" },
-        { name: "Tableau", logo: "LayoutGrid" },
+        { name: "Power BI", logo: "BarChart4" },
+        { name: "Tableau", logo: "PieChart" },
         { name: "Advanced Excel", logo: "Sheet" },
+        { name: "Python", logo: "Code" }
     ],
+
     software: [
         { name: "Oracle", logo: "Server" },
-        { name: "SAP", logo: "Layers" },
+        { name: "SAP", logo: "Boxes" },
         { name: "Excel", logo: "Sheet" },
         { name: "PowerPoint", logo: "Presentation" },
         { name: "Word", logo: "FileText" },
@@ -181,11 +185,11 @@ export const skills = {
 
     specialized: [
         { name: "Tally", logo: "Calculator" },
-        { name: "Finacle", logo: "Banknote" },
+        { name: "Finacle", logo: "Building2" },
         { name: "Grant Management", logo: "ClipboardList" },
         { name: "Compliance Systems", logo: "CheckSquare" },
         { name: "Audit Software", logo: "FileSearch" },
-        { name: "Tax Software", logo: "FileBarChart" }
+        { name: "Tax Software", logo: "Receipt" }
     ],
 
     certifications: [

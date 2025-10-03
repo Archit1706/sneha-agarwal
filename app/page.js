@@ -8,12 +8,6 @@ import { personalInfo, skills } from "@/data";
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const allSkills = [
-    ...skills.technical,
-    ...skills.software,
-    ...skills.specialized
-  ];
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -101,9 +95,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Side - DNA Strand Animation */}
+              {/* Right Side - Financial Flow Animation */}
               <div className="relative h-[600px] flex items-center justify-center">
-                <DNAStrand skills={allSkills} />
+                <FinancialFlowAnimation />
               </div>
             </div>
           </div>
@@ -165,55 +159,152 @@ export default function Home() {
   );
 }
 
-function DNAStrand({ skills }) {
-  const [rotation, setRotation] = useState(0);
+function FinancialFlowAnimation() {
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotation((prev) => (prev + 1) % 360);
+      setTime((prev) => prev + 0.02);
     }, 50);
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <div className="relative w-full h-full perspective-1000">
-      <div
-        className="absolute inset-0 transform-gpu"
-        style={{
-          transform: `rotateY(${rotation}deg)`,
-          transformStyle: "preserve-3d"
-        }}
-      >
-        {skills.map((skill, idx) => {
-          const angle = (idx / skills.length) * Math.PI * 4;
-          const radius = 150;
-          const x = Math.cos(angle) * radius;
-          const z = Math.sin(angle) * radius;
-          const y = (idx / skills.length) * 500 - 250;
+  // Financial metrics that flow through the animation
+  const metrics = [
+    { label: "ROI", value: "+15%", color: "from-green-500 to-emerald-600" },
+    { label: "Cost", value: "-15%", color: "from-blue-500 to-cyan-600" },
+    { label: "Profit", value: "+8%", color: "from-purple-500 to-pink-600" },
+    { label: "Efficiency", value: "+20%", color: "from-orange-500 to-red-600" },
+    { label: "Accuracy", value: "+98%", color: "from-indigo-500 to-blue-600" },
+    { label: "Growth", value: "+40%", color: "from-yellow-500 to-amber-600" }
+  ];
 
-          return (
-            <div
-              key={idx}
-              className="absolute left-1/2 top-1/2 group"
-              style={{
-                transform: `translate3d(${x}px, ${y}px, ${z}px)`,
-                transformStyle: "preserve-3d"
-              }}
-            >
-              <div className="w-16 h-16 bg-white dark:bg-gray-800 rounded-full shadow-xl flex items-center justify-center transform hover:scale-125 transition-all duration-300 border-2 border-gray-200 dark:border-gray-700">
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-10 h-10 object-contain"
-                />
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
-                  {skill.name}
-                </div>
+  // Skills to display in circular orbit
+  const skillSet = [
+    ...skills.technical,
+    ...skills.languages.slice(0, 3),
+    ...skills.frameworks.slice(0, 3)
+  ];
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      {/* Central Hub - Accounting Symbol */}
+      <div className="absolute z-20 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full shadow-2xl flex items-center justify-center animate-pulse-slow">
+        <div className="text-white text-6xl font-bold">₹</div>
+      </div>
+
+      {/* Orbiting Financial Metrics */}
+      {metrics.map((metric, idx) => {
+        const angle = (idx / metrics.length) * Math.PI * 2 + time;
+        const radius = 200;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+
+        return (
+          <div
+            key={idx}
+            className="absolute transition-all duration-300 ease-out"
+            style={{
+              transform: `translate(${x}px, ${y}px)`,
+            }}
+          >
+            <div className={`bg-gradient-to-br ${metric.color} rounded-2xl p-4 shadow-xl hover:scale-110 transition-transform cursor-pointer`}>
+              <div className="text-white text-center">
+                <div className="text-xs font-semibold opacity-80">{metric.label}</div>
+                <div className="text-xl font-bold">{metric.value}</div>
               </div>
             </div>
+          </div>
+        );
+      })}
+
+      {/* Connecting Lines - Data Flow */}
+      <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
+        {metrics.map((_, idx) => {
+          const angle = (idx / metrics.length) * Math.PI * 2 + time;
+          const radius = 200;
+          const x = Math.cos(angle) * radius + 300;
+          const y = Math.sin(angle) * radius + 300;
+
+          return (
+            <line
+              key={idx}
+              x1="300"
+              y1="300"
+              x2={x}
+              y2={y}
+              stroke="url(#gradient)"
+              strokeWidth="2"
+              opacity="0.3"
+              className="animate-pulse"
+            />
           );
         })}
-      </div>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#3B82F6" />
+            <stop offset="100%" stopColor="#A855F7" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      {/* Floating Skills Icons */}
+      {skillSet.slice(0, 8).map((skill, idx) => {
+        const floatAngle = time * 0.5 + idx * 0.8;
+        const floatRadius = 280 + Math.sin(time * 2 + idx) * 20;
+        const x = Math.cos(floatAngle) * floatRadius;
+        const y = Math.sin(floatAngle) * floatRadius;
+
+        return (
+          <div
+            key={idx}
+            className="absolute transition-all duration-500 ease-out"
+            style={{
+              transform: `translate(${x}px, ${y}px)`,
+            }}
+          >
+            <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:scale-125 transition-all border-2 border-gray-200 dark:border-gray-700 group">
+              <span className="text-2xl">💰</span>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                {skill.name}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+      {/* Animated Background Particles */}
+      {[...Array(12)].map((_, idx) => {
+        const particleAngle = time * 0.3 + idx * 0.5;
+        const particleRadius = 100 + (idx % 3) * 50;
+        const x = Math.cos(particleAngle) * particleRadius;
+        const y = Math.sin(particleAngle) * particleRadius;
+
+        return (
+          <div
+            key={idx}
+            className="absolute w-2 h-2 bg-blue-500 rounded-full opacity-30"
+            style={{
+              transform: `translate(${x}px, ${y}px)`,
+            }}
+          />
+        );
+      })}
+
+      <style jsx>{`
+        @keyframes pulse-slow {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }

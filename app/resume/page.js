@@ -1,4 +1,5 @@
 "use client";
+import { Download, Mail, Phone, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo, education, experiences, skills } from "@/data";
@@ -11,55 +12,46 @@ export default function Resume() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen pt-20 bg-gradient-to-br from-gray-50 via-white to-indigo-50 dark:from-gray-900 dark:via-black dark:to-indigo-900">
+            <main className="min-h-screen pt-20 bg-gradient-to-br from-[#FAF8F1] via-[#FAEAB1]/30 to-[#34656D]/10">
                 <section className="py-20">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         {/* Header */}
                         <div className="text-center mb-12 animate-fade-in">
                             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                                <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-[#34656D] to-[#334443] bg-clip-text text-transparent">
                                     Resume
                                 </span>
                             </h1>
                             <button
                                 onClick={handleDownload}
-                                className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 mx-auto"
+                                className="px-8 py-4 bg-gradient-to-r from-[#34656D] to-[#334443] text-white rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 mx-auto"
                             >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
+                                <Download className="w-5 h-5" />
                                 Download PDF
                             </button>
                         </div>
 
                         {/* Resume Content */}
-                        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 md:p-12">
+                        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-[#FAEAB1]/50">
                             {/* Personal Info */}
-                            <div className="text-center mb-12 pb-8 border-b-2 border-gray-200 dark:border-gray-700">
-                                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                            <div className="text-center mb-12 pb-8 border-b-2 border-[#FAEAB1]">
+                                <h2 className="text-4xl font-bold text-[#334443] mb-2">
                                     {personalInfo.name}
                                 </h2>
-                                <p className="text-xl text-indigo-600 dark:text-indigo-400 font-semibold mb-4">
+                                <p className="text-xl text-[#34656D] font-semibold mb-4">
                                     {personalInfo.title}
                                 </p>
-                                <div className="flex flex-wrap justify-center gap-6 text-gray-600 dark:text-gray-400">
+                                <div className="flex flex-wrap justify-center gap-6 text-[#334443]/70">
                                     <span className="flex items-center gap-2">
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                        </svg>
+                                        <Mail className="w-5 h-5" />
                                         {personalInfo.email}
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                        </svg>
+                                        <Phone className="w-5 h-5" />
                                         {personalInfo.phone}
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                        </svg>
+                                        <MapPin className="w-5 h-5" />
                                         {personalInfo.location}
                                     </span>
                                 </div>
@@ -67,39 +59,39 @@ export default function Resume() {
 
                             {/* Summary */}
                             <div className="mb-12">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-blue-600 rounded"></span>
+                                <h3 className="text-2xl font-bold text-[#334443] mb-4 flex items-center gap-2">
+                                    <span className="w-2 h-8 bg-gradient-to-b from-[#34656D] to-[#334443] rounded"></span>
                                     Professional Summary
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                <p className="text-[#334443]/80 leading-relaxed">
                                     {personalInfo.bio}
                                 </p>
                             </div>
 
                             {/* Experience */}
                             <div className="mb-12">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                    <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-blue-600 rounded"></span>
+                                <h3 className="text-2xl font-bold text-[#334443] mb-6 flex items-center gap-2">
+                                    <span className="w-2 h-8 bg-gradient-to-b from-[#34656D] to-[#334443] rounded"></span>
                                     Work Experience
                                 </h3>
                                 <div className="space-y-8">
                                     {experiences.map((exp, idx) => (
-                                        <div key={idx} className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-indigo-600 before:rounded-full">
+                                        <div key={idx} className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-[#34656D] before:rounded-full">
                                             <div className="mb-2">
-                                                <h4 className="text-xl font-bold text-gray-900 dark:text-white">
+                                                <h4 className="text-xl font-bold text-[#334443]">
                                                     {exp.title}
                                                 </h4>
-                                                <p className="text-lg text-indigo-600 dark:text-indigo-400 font-semibold">
+                                                <p className="text-lg text-[#34656D] font-semibold">
                                                     {exp.company}
                                                 </p>
-                                                <p className="text-sm text-gray-500 dark:text-gray-400">
+                                                <p className="text-sm text-[#334443]/60">
                                                     {exp.period} | {exp.location}
                                                 </p>
                                             </div>
                                             <ul className="space-y-2 mt-3">
                                                 {exp.responsibilities.slice(0, 3).map((resp, i) => (
-                                                    <li key={i} className="text-gray-600 dark:text-gray-300 flex items-start gap-2">
-                                                        <span className="text-indigo-600 mt-1">•</span>
+                                                    <li key={i} className="text-[#334443]/80 flex items-start gap-2">
+                                                        <span className="text-[#34656D] mt-1">•</span>
                                                         <span>{resp}</span>
                                                     </li>
                                                 ))}
@@ -111,20 +103,20 @@ export default function Resume() {
 
                             {/* Education */}
                             <div className="mb-12">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                    <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-blue-600 rounded"></span>
+                                <h3 className="text-2xl font-bold text-[#334443] mb-6 flex items-center gap-2">
+                                    <span className="w-2 h-8 bg-gradient-to-b from-[#34656D] to-[#334443] rounded"></span>
                                     Education
                                 </h3>
                                 <div className="space-y-6">
                                     {education.map((edu, idx) => (
-                                        <div key={idx} className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-indigo-600 before:rounded-full">
-                                            <h4 className="text-xl font-bold text-gray-900 dark:text-white">
+                                        <div key={idx} className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-[#34656D] before:rounded-full">
+                                            <h4 className="text-xl font-bold text-[#334443]">
                                                 {edu.degree}
                                             </h4>
-                                            <p className="text-lg text-indigo-600 dark:text-indigo-400 font-semibold">
+                                            <p className="text-lg text-[#34656D] font-semibold">
                                                 {edu.institution}
                                             </p>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                                            <p className="text-sm text-[#334443]/60">
                                                 {edu.period} | GPA: {edu.gpa}
                                             </p>
                                         </div>
@@ -134,36 +126,36 @@ export default function Resume() {
 
                             {/* Skills */}
                             <div>
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                    <span className="w-2 h-8 bg-gradient-to-b from-indigo-600 to-blue-600 rounded"></span>
+                                <h3 className="text-2xl font-bold text-[#334443] mb-6 flex items-center gap-2">
+                                    <span className="w-2 h-8 bg-gradient-to-b from-[#34656D] to-[#334443] rounded"></span>
                                     Technical Skills
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white mb-3">Languages</h4>
+                                        <h4 className="font-bold text-[#334443] mb-3">Standards</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {skills.languages.map((skill, idx) => (
-                                                <span key={idx} className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm">
+                                                <span key={idx} className="px-3 py-1 bg-[#34656D]/10 text-[#34656D] rounded-full text-sm">
                                                     {skill.name}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white mb-3">Frameworks</h4>
+                                        <h4 className="font-bold text-[#334443] mb-3">Frameworks</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {skills.frameworks.map((skill, idx) => (
-                                                <span key={idx} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">
+                                                <span key={idx} className="px-3 py-1 bg-[#334443]/10 text-[#334443] rounded-full text-sm">
                                                     {skill.name}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900 dark:text-white mb-3">Tools</h4>
+                                        <h4 className="font-bold text-[#334443] mb-3">Tools</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {skills.tools.map((skill, idx) => (
-                                                <span key={idx} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm">
+                                                <span key={idx} className="px-3 py-1 bg-[#FAEAB1]/50 text-[#334443] rounded-full text-sm">
                                                     {skill.name}
                                                 </span>
                                             ))}
