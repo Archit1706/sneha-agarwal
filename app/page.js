@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Linkedin, Mail, Phone } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo, skills } from "@/data";
@@ -17,9 +18,9 @@ export default function Home() {
   }, []);
 
   const socialLinks = [
-    { name: "LinkedIn", url: personalInfo.socials.linkedin, icon: "💼" },
-    { name: "Email", url: personalInfo.socials.email, icon: "📧" },
-    { name: "Phone", url: personalInfo.socials.phone, icon: "📱" }
+    { name: "LinkedIn", url: personalInfo.socials.linkedin, icon: Linkedin },
+    { name: "Email", url: personalInfo.socials.email, icon: Mail },
+    { name: "Phone", url: personalInfo.socials.phone, icon: Phone }
   ];
 
   return (
@@ -27,12 +28,12 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-black dark:to-purple-900">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAF8F1]">
           {/* Animated Background */}
           <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 opacity-20"
             style={{
-              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.15), transparent 50%)`
+              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(52, 101, 109, 0.3), transparent 50%)`
             }}
           />
 
@@ -42,53 +43,56 @@ export default function Home() {
               <div className="space-y-8 animate-fade-in">
                 <div className="space-y-4">
                   <h1 className="text-5xl md:text-7xl font-bold">
-                    <span className="block text-gray-900 dark:text-white">
+                    <span className="block text-[#334443]">
                       Hi, I'm
                     </span>
-                    <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                    <span className="block bg-gradient-to-r from-[#34656D] via-[#334443] to-[#34656D] bg-clip-text text-transparent animate-gradient">
                       {personalInfo.name}
                     </span>
                   </h1>
 
-                  <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium">
+                  <p className="text-xl md:text-2xl text-[#34656D] font-medium">
                     {personalInfo.title}
                   </p>
 
-                  <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl">
+                  <p className="text-lg text-[#334443]/70 max-w-xl">
                     {personalInfo.tagline}
                   </p>
                 </div>
 
                 {/* Social Links */}
                 <div className="flex flex-wrap gap-4">
-                  {socialLinks.map((social, idx) => (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
-                      style={{ animationDelay: `${idx * 0.1}s` }}
-                    >
-                      <span className="text-2xl">{social.icon}</span>
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">
-                        {social.name}
-                      </span>
-                    </a>
-                  ))}
+                  {socialLinks.map((social, idx) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={social.name}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 border border-[#FAEAB1]"
+                        style={{ animationDelay: `${idx * 0.1}s` }}
+                      >
+                        <Icon className="w-5 h-5 text-[#34656D]" />
+                        <span className="text-[#334443] font-medium">
+                          {social.name}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/contact"
-                    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl"
+                    className="px-8 py-4 bg-gradient-to-r from-[#34656D] to-[#334443] text-white rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl"
                   >
                     Get In Touch
                   </Link>
                   <Link
                     href="/projects"
-                    className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl border-2 border-gray-200 dark:border-gray-700"
+                    className="px-8 py-4 bg-white text-[#334443] rounded-full font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl border-2 border-[#34656D]"
                   >
                     View Projects
                   </Link>
@@ -104,8 +108,8 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-scroll" />
+            <div className="w-6 h-10 border-2 border-[#34656D] rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-[#34656D] rounded-full mt-2 animate-scroll" />
             </div>
           </div>
         </section>
@@ -171,12 +175,12 @@ function FinancialFlowAnimation() {
 
   // Financial metrics that flow through the animation
   const metrics = [
-    { label: "ROI", value: "+15%", color: "from-green-500 to-emerald-600" },
-    { label: "Cost", value: "-15%", color: "from-blue-500 to-cyan-600" },
-    { label: "Profit", value: "+8%", color: "from-purple-500 to-pink-600" },
-    { label: "Efficiency", value: "+20%", color: "from-orange-500 to-red-600" },
-    { label: "Accuracy", value: "+98%", color: "from-indigo-500 to-blue-600" },
-    { label: "Growth", value: "+40%", color: "from-yellow-500 to-amber-600" }
+    { label: "ROI", value: "+15%", color: "from-[#34656D] to-[#34656D]/80" },
+    { label: "Cost", value: "-15%", color: "from-[#334443] to-[#334443]/80" },
+    { label: "Profit", value: "+8%", color: "from-[#34656D] to-[#FAEAB1]" },
+    { label: "Efficiency", value: "+20%", color: "from-[#334443] to-[#34656D]" },
+    { label: "Accuracy", value: "+98%", color: "from-[#34656D] to-[#334443]" },
+    { label: "Growth", value: "+40%", color: "from-[#FAEAB1] to-[#34656D]" }
   ];
 
   // Skills to display in circular orbit
@@ -189,7 +193,7 @@ function FinancialFlowAnimation() {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       {/* Central Hub - Accounting Symbol */}
-      <div className="absolute z-20 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full shadow-2xl flex items-center justify-center animate-pulse-slow">
+      <div className="absolute z-20 w-32 h-32 bg-gradient-to-br from-[#34656D] to-[#334443] rounded-full shadow-2xl flex items-center justify-center animate-pulse-slow">
         <div className="text-white text-6xl font-bold">₹</div>
       </div>
 
@@ -235,15 +239,15 @@ function FinancialFlowAnimation() {
               y2={y}
               stroke="url(#gradient)"
               strokeWidth="2"
-              opacity="0.3"
+              opacity="0.4"
               className="animate-pulse"
             />
           );
         })}
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="100%" stopColor="#A855F7" />
+            <stop offset="0%" stopColor="#34656D" />
+            <stop offset="100%" stopColor="#334443" />
           </linearGradient>
         </defs>
       </svg>
@@ -263,9 +267,9 @@ function FinancialFlowAnimation() {
               transform: `translate(${x}px, ${y}px)`,
             }}
           >
-            <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:scale-125 transition-all border-2 border-gray-200 dark:border-gray-700 group">
+            <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-125 transition-all border-2 border-[#FAEAB1] group">
               <span className="text-2xl">💰</span>
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-[#334443] text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {skill.name}
               </div>
             </div>
@@ -283,7 +287,7 @@ function FinancialFlowAnimation() {
         return (
           <div
             key={idx}
-            className="absolute w-2 h-2 bg-blue-500 rounded-full opacity-30"
+            className="absolute w-2 h-2 bg-[#34656D] rounded-full opacity-30"
             style={{
               transform: `translate(${x}px, ${y}px)`,
             }}

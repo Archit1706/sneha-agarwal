@@ -9,7 +9,7 @@ export default function Experience() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen pt-20 bg-gradient-to-br from-[#FAF8F1] via-[#FAEAB1]/30 to-[#34656D]/10">
+            <main className="min-h-screen pt-20 bg-[#FAF8F1]">
                 <section className="py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         {/* Header */}

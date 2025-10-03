@@ -82,7 +82,7 @@ export const experiences = [
         company: "Office of Population Health Sciences, UI Health",
         location: "Chicago, Illinois",
         period: "October 2024 - February 2025",
-        type: "Full-time",
+        type: "Part-time",
         description: "Managing financial operations for COVID-19 research grants and public health initiatives",
         responsibilities: [
             "Managed grant invoicing from Reliance and other partners, ensuring efficient fund allocation for COVID-19 research and public health initiatives",
