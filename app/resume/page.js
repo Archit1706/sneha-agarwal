@@ -6,7 +6,12 @@ import { personalInfo, education, experiences, skills } from "@/data";
 
 export default function Resume() {
     const handleDownload = () => {
-        alert("Resume download functionality - Connect to your actual resume file");
+        const link = document.createElement("a");
+        link.href = "/Resume.pdf";
+        link.download = "Sneha_Agarwal_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -16,7 +21,7 @@ export default function Resume() {
                 {/* Grid pattern overlay only */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div
-                        className="absolute inset-0 opacity-[0.04]"
+                        className="absolute inset-0 opacity-[0.05]"
                         style={{
                             backgroundImage: `linear-gradient(#34656D 1px, transparent 1px), linear-gradient(90deg, #34656D 1px, transparent 1px)`,
                             backgroundSize: '50px 50px'
