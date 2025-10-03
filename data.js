@@ -141,30 +141,51 @@ export const experiences = [
 
 export const skills = {
     technical: [
-        { name: "Financial Modeling", icon: "📊" },
-        { name: "Data Analytics", icon: "📈" },
-        { name: "Fraud Detection", icon: "🔍" },
-        { name: "Financial Forecasting", icon: "💹" },
-        { name: "Budget Management", icon: "💰" },
-        { name: "Risk Assessment", icon: "⚖️" }
+        { name: "Financial Modeling", logo: "AreaChart" },
+        { name: "Data Analytics", logo: "BarChart3" },
+        { name: "Fraud Detection", logo: "Fingerprint" },
+        { name: "Financial Forecasting", logo: "TrendingUp" },
+        { name: "Budget Management", logo: "Wallet" },
+        { name: "Risk Assessment", logo: "Scale" }
     ],
 
+    languages: [
+        { name: "US GAAP", logo: "FileText" },
+        { name: "IFRS", logo: "Globe" },
+        { name: "Ind AS", logo: "Flag" },
+        { name: "Tax Codes", logo: "Scroll" },
+        { name: "VBA", logo: "Code" },
+    ],
+
+    frameworks: [
+        { name: "Valuation Methods", logo: "Coins" },
+        { name: "M&A Due Diligence", logo: "Handshake" },
+        { name: "Costing & Inventory", logo: "Warehouse" },
+        { name: "Internal Controls (SOX)", logo: "Lock" },
+    ],
+
+    tools: [
+        { name: "SQL", logo: "Database" },
+        { name: "Power BI", logo: "LayoutPanel" },
+        { name: "Tableau", logo: "LayoutGrid" },
+        { name: "Advanced Excel", logo: "Sheet" },
+    ],
     software: [
-        { name: "Oracle", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" },
-        { name: "SAP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sap/sap-original.svg" },
-        { name: "Excel", logo: "https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" },
-        { name: "PowerPoint", logo: "https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" },
-        { name: "Word", logo: "https://img.icons8.com/color/96/microsoft-word-2019--v1.png" },
-        { name: "Outlook", logo: "https://img.icons8.com/color/96/microsoft-outlook-2019--v2.png" }
+        { name: "Oracle", logo: "Server" },
+        { name: "SAP", logo: "Layers" },
+        { name: "Excel", logo: "Sheet" },
+        { name: "PowerPoint", logo: "Presentation" },
+        { name: "Word", logo: "FileText" },
+        { name: "Outlook", logo: "Mail" }
     ],
 
     specialized: [
-        { name: "Tally", icon: "💼" },
-        { name: "Finacle", icon: "🏦" },
-        { name: "Grant Management", icon: "📋" },
-        { name: "Compliance Systems", icon: "✓" },
-        { name: "Audit Software", icon: "🔎" },
-        { name: "Tax Software", icon: "📑" }
+        { name: "Tally", logo: "Calculator" },
+        { name: "Finacle", logo: "Banknote" },
+        { name: "Grant Management", logo: "ClipboardList" },
+        { name: "Compliance Systems", logo: "CheckSquare" },
+        { name: "Audit Software", logo: "FileSearch" },
+        { name: "Tax Software", logo: "FileBarChart" }
     ],
 
     certifications: [

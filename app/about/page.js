@@ -1,8 +1,19 @@
 "use client";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo, education, skills } from "@/data";
+
+// Dynamic import for Lucide icons
+const LucideIcon = ({ name, ...props }) => {
+    const Icon = dynamic(() => import('lucide-react').then(mod => mod[name] || mod.X), {
+        ssr: false,
+        loading: () => <div className="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full animate-pulse"></div>
+    });
+    return <Icon {...props} />;
+};
+
 
 export default function About() {
     const [activeTab, setActiveTab] = useState("about");
@@ -206,8 +217,11 @@ function EducationSection() {
 function SkillsSection() {
     const skillCategories = [
         { title: "Technical Skills", skills: skills?.technical ?? [], color: "from-blue-500 to-cyan-500" },
-        { title: "Software & Tools", skills: skills?.software ?? [], color: "from-purple-500 to-pink-500" },
-        { title: "Specialized Tools", skills: skills?.specialized ?? [], color: "from-orange-500 to-red-500" },
+        { title: "Reporting Standards", skills: skills?.languages ?? [], color: "from-green-500 to-emerald-500" },
+        { title: "Frameworks & Methods", skills: skills?.frameworks ?? [], color: "from-red-500 to-orange-500" },
+        { title: "Data & BI Tools", skills: skills?.tools ?? [], color: "from-purple-500 to-pink-500" },
+        { title: "Software Proficiency", skills: skills?.software ?? [], color: "from-indigo-500 to-blue-500" },
+        { title: "Specialized Tools", skills: skills?.specialized ?? [], color: "from-yellow-500 to-amber-500" },
     ];
 
     return (
@@ -226,11 +240,11 @@ function SkillsSection() {
                                 className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col items-center gap-4"
                             >
                                 <div className="w-16 h-16 flex items-center justify-center">
+                                    {/* Renders Lucide Icon if skill.logo is a string, otherwise uses a fallback */}
                                     {skill.logo ? (
-                                        <img
-                                            src={skill.logo}
-                                            alt={skill.name ?? "skill"}
-                                            className="w-full h-full object-contain group-hover:scale-110 transition-transform"
+                                        <LucideIcon
+                                            name={skill.logo}
+                                            className="w-10 h-10 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform"
                                         />
                                     ) : (
                                         <span className="text-4xl">{skill.icon ?? "•"}</span>
@@ -260,7 +274,7 @@ function SkillsSection() {
                         >
                             <div className="flex items-start gap-4 mb-4">
                                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-3xl flex-shrink-0">
-                                    🏆
+                                    <LucideIcon name="Award" className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold mb-1">{cert.name}</h4>
