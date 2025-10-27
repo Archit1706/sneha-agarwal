@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://snehaagarwal.com'), // Update with your actual domain
+  metadataBase: new URL('https://ca-sneha-agarwal.vercel.app'),
   title: {
     default: "Sneha Agarwal - Chartered Accountant | MBA & MS Finance",
     template: "%s | Sneha Agarwal"
@@ -46,13 +46,13 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://snehaagarwal.com",
+    url: "https://ca-sneha-agarwal.vercel.app",
     title: "Sneha Agarwal - Chartered Accountant | MBA & MS Finance Candidate",
     description: "Results-driven Chartered Accountant with expertise in financial management, fraud detection, and strategic planning. Pursuing dual master's degrees in Business Administration and Finance at University of Illinois Chicago.",
     siteName: "Sneha Agarwal Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // You'll need to create this image
+        url: "/og-image.png", // You'll need to create this image
         width: 1200,
         height: 630,
         alt: "Sneha Agarwal - Financial Professional",
@@ -63,7 +63,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Sneha Agarwal - Chartered Accountant | MBA & MS Finance",
     description: "Financial management expert specializing in fraud detection, cost optimization, and strategic finance. MBA & MS Finance candidate at UIC.",
-    images: ["/og-image.jpg"], // You'll need to create this image
+    images: ["/og-image.png"], // You'll need to create this image
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://snehaagarwal.com",
+    canonical: "https://ca-sneha-agarwal.vercel.app",
   },
   category: "Finance & Accounting",
 };
@@ -89,8 +89,8 @@ const jsonLd = {
   name: "Sneha Agarwal",
   jobTitle: "Chartered Accountant | MBA & MS Finance Candidate",
   description: "Results-driven Chartered Accountant with expertise in financial management, fraud detection, and strategic planning",
-  url: "https://snehaagarwal.com",
-  email: "snehapirthani@gmail.com",
+  url: "https://ca-sneha-agarwal.vercel.app",
+  email: "sagar39@uic.edu",
   telephone: "+1-312-399-8494",
   address: {
     "@type": "PostalAddress",
@@ -149,7 +149,8 @@ const jsonLd = {
   ],
   sameAs: [
     "https://linkedin.com/in/snehaagarwal",
-    "mailto:snehapirthani@gmail.com"
+    "mailto:sagar39@uic.edu",
+    "https://www.instagram.com/sneha_agarwal8",
   ]
 };
 
@@ -160,13 +161,13 @@ export default function RootLayout({ children }) {
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
+
         {/* Theme Color */}
         <meta name="theme-color" content="#34656D" />
-        
+
         {/* Verification Tags (add when you have them) */}
         {/* <meta name="google-site-verification" content="your-verification-code" /> */}
-        
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
