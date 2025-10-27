@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Send, Instagram } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo } from "@/data";
@@ -49,7 +49,8 @@ export default function Contact() {
     ];
 
     const socialLinks = [
-        { name: "LinkedIn", url: personalInfo.socials.linkedin, color: "bg-[#34656D]", icon: Linkedin }
+        { name: "LinkedIn", url: personalInfo.socials.linkedin, color: "bg-[#34656D]", icon: Linkedin },
+        { name: "Instagram", url: personalInfo.socials.instagram, color: "bg-[#34656D]", icon: Instagram }
     ];
 
     return (

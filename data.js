@@ -1,38 +1,39 @@
 export const personalInfo = {
     name: "Sneha Agarwal",
-    tagline: "Driving financial excellence through data-driven insights and strategic innovation",
-    title: "Chartered Accountant | MBA & MS Finance Candidate",
-    email: "snehapirthani@gmail.com",
+    tagline: "MBA & MS Finance Candidate | CA & CFE | Driving FP&A excellence through data-driven insights",
+    title: "Chartered Accountant | Certified Fraud Examiner | Finance Analytics Professional",
+    email: "sagar39@uic.edu",
     phone: "312-399-8494",
     location: "Chicago, IL",
 
     socials: {
         linkedin: "https://linkedin.com/in/snehaagarwal",
-        email: "mailto:snehapirthani@gmail.com",
+        instagram: "https://www.instagram.com/sneha_agarwal8",
+        email: "mailto:sagar39@uic.edu",
         phone: "tel:312-399-8494"
     },
 
-    bio: "Results-driven Chartered Accountant with expertise in financial management, fraud detection, and strategic planning. Currently pursuing dual master's degrees in Business Administration and Finance at University of Illinois Chicago. Proven track record of optimizing financial operations, reducing costs, and implementing AI-based fraud detection systems.",
+    bio: "MBA & MS Finance candidate (UIC) with CA and CFE credentials, bringing 3+ years of expertise in FP&A, reconciliations, and audit-ready controls across healthcare and manufacturing. Delivered +8% EBITDA growth, reduced month-end close cycles from 5 to 3 days, and managed $4M+ multi-grant budgets to NIH/GAAP standards. Google Data Analytics certified with strong SQL, R, and Excel capabilities to translate complex data into clear, defensible business decisions.",
 
     about: {
-        description: "As a Chartered Accountant with comprehensive experience in financial management, auditing, and compliance, I bring a unique blend of technical expertise and strategic thinking to every challenge. My journey has taken me from audit firms in India to research finance roles in the US, where I've consistently delivered measurable improvements in financial efficiency, fraud detection, and operational excellence. I'm passionate about leveraging data analytics and AI to transform financial operations and drive informed decision-making.",
+        description: "As a Chartered Accountant and Certified Fraud Examiner pursuing dual master's degrees at UIC, I combine rigorous technical expertise with strategic financial leadership. My track record spans research finance in healthcare, manufacturing FP&A, and audit assurance—consistently delivering measurable improvements in operational efficiency, cost optimization, and fraud prevention. I'm passionate about leveraging advanced analytics (SQL, Power Query, R) to drive data-informed decision-making and strengthen financial controls across complex, multi-stakeholder environments.",
 
         interests: [
-            "Financial Analytics & Modeling",
+            "FP&A & Financial Modeling",
+            "Data Analytics & Visualization",
             "Fraud Detection & Forensic Accounting",
-            "Audit & Assurance",
-            "Strategic Finance & Planning",
-            "Data-Driven Decision Making",
-            "AI in Finance & Accounting"
+            "Grant Accounting & Compliance",
+            "Budget Forecasting & Variance Analysis",
+            "Strategic Finance & Business Intelligence"
         ],
 
         hobbies: [
-            "Community Service & Volunteering",
-            "Event Planning & Management",
+            "Community Service & Leadership",
+            "Financial Literacy Advocacy",
+            "Event Planning & Fundraising",
             "Environmental Sustainability Initiatives",
-            "Healthcare Advocacy",
-            "Financial Literacy Education",
-            "Reading Financial Literature"
+            "Women in Finance Mentorship",
+            "Healthcare & Animal Welfare Volunteering"
         ]
     }
 };
@@ -45,9 +46,10 @@ export const education = [
         period: "August 2024 - May 2026",
         gpa: "In Progress",
         achievements: [
-            "Dual Master's program combining business strategy and financial analytics",
-            "Focus on financial modeling, data analytics, and strategic management",
-            "Active participant in finance and accounting student organizations"
+            "Dual Master's program combining management strategy and advanced finance",
+            "Completed Google Data Analytics Specialization Certificate (SQL, R, EDA)",
+            "Focus on financial modeling, DCF/WACC valuation, FP&A, and data-driven decision making",
+            "Active leadership in Student Business Ambassador program and Women in Finance chapter"
         ]
     },
     {
@@ -57,113 +59,129 @@ export const education = [
         period: "2018 - December 2021",
         gpa: "Professional Qualification",
         achievements: [
-            "Completed rigorous 3-year professional accounting program",
-            "Specialized in auditing, taxation, and financial management",
-            "Practical training in audit firms and corporate finance"
+            "Completed rigorous 3-year professional accounting program with practical training",
+            "Specialized in statutory auditing, taxation, financial management, and Ind-AS/IFRS",
+            "Executed 35+ statutory audits for banking, NBFC, and corporate clients",
+            "Strong foundation in internal controls, risk assessment, and compliance"
         ]
     },
     {
-        degree: "Bachelor of Commerce",
+        degree: "Bachelor of Commerce in Accounting and Finance",
         institution: "Ahmedabad University",
         location: "Ahmedabad, India",
         period: "2015 - December 2018",
         gpa: "Honors",
         achievements: [
-            "Strong foundation in accounting, finance, and business management",
-            "Academic excellence in financial accounting and corporate law",
-            "Active participation in business and finance clubs"
+            "Strong foundation in accounting principles, finance theory, and business management",
+            "Academic excellence in financial accounting, corporate law, and cost accounting",
+            "Active participation in business clubs and finance-focused extracurricular activities"
         ]
     }
 ];
 
 export const experiences = [
     {
-        title: "Research and Finance Associate",
+        title: "Research & Finance Analyst",
+        company: "UIC College of Applied Health Sciences",
+        location: "Chicago, Illinois",
+        period: "March 2025 - Present",
+        type: "Part-time",
+        description: "Managing financial reconciliations and analysis for $4M+ multi-grant research budgets with NIH/GAAP compliance",
+        responsibilities: [
+            "Reconcile $4M+ in multi-grant budgets monthly to NIH/GAAP standards; built Power Query + SQL checks reducing audit-prep time by 30%",
+            "Investigate variances across 12 cost centers; synthesize decision memos for quarterly planning and scenario reviews",
+            "Coordinate with HR/Procurement and 8 PIs to process budget amendments within ≤3 days (vs 10-day SLA)",
+            "Deliver audit-ready documentation and controls ensuring zero compliance exceptions"
+        ],
+        technologies: ["Power Query", "SQL", "Excel", "NIH Grant Systems", "GAAP Compliance"]
+    },
+    {
+        title: "Research & Finance Associate",
         company: "Office of Population Health Sciences, UI Health",
         location: "Chicago, Illinois",
         period: "October 2024 - February 2025",
         type: "Part-time",
-        description: "Managing financial operations for COVID-19 research grants and public health initiatives",
+        description: "Managed invoicing, forecasting, and allocation for $1.5M+ research grants with zero compliance exceptions",
         responsibilities: [
-            "Managed grant invoicing from Reliance and other partners, ensuring efficient fund allocation for COVID-19 research and public health initiatives",
-            "Developed financial tracking systems, optimizing fund utilization and compliance with grant agreements",
-            "Developed financial forecasting models to optimize budget allocation, improving funding efficiency by 20%",
-            "Coordinated with research teams to ensure timely financial reporting and budget compliance"
+            "Managed invoicing and allocation for $1.5M+ research grants with zero compliance exceptions; shortened approval cycles by 25%",
+            "Built driver-based Excel + SQL forecasting template adopted by 7 units, improving forecast accuracy by 20%",
+            "Produced ad-hoc visualizations using Power BI/Tableau and conducted variance analyses; integrated REDCap to Excel workflows saving 10 hours/week",
+            "Created real-time dashboards with variance analysis, reducing budget deviation by 15% through data-driven insights"
         ],
-        technologies: ["Oracle", "SAP", "Excel", "Financial Modeling", "Grant Management"]
+        technologies: ["Oracle", "SQL", "Excel", "Power BI", "Tableau", "REDCap", "Grant Management"]
     },
     {
-        title: "Financial Manager",
+        title: "Business Finance Manager",
         company: "Almora Coating World",
-        location: "Ahmedabad, India",
+        location: "Gujarat, India",
         period: "April 2022 - July 2024",
         type: "Full-time",
-        description: "Led comprehensive financial management and fraud detection initiatives",
+        description: "Led comprehensive financial operations, cost optimization, and fraud detection across manufacturing operations",
         responsibilities: [
-            "Led cost optimization initiatives, achieving a 15% reduction in expenses and an 8% rise in profitability through data-driven financial models",
-            "Spearheaded financial reporting improvements, enhancing cash flow tracking and budget forecasting",
-            "Trained and managed 50+ employees, improving financial literacy and boosting efficiency",
-            "Developed AI based fraud detection models, reducing fraud risk by 15%, improving security, and driving proactive financial governance measures",
-            "Implemented comprehensive financial controls and audit procedures"
+            "Delivered +8% EBITDA growth through supplier repricing, procurement redesign, and working capital optimization initiatives",
+            "Implemented forensic-style controls that identified and plugged INR 6M in leakages; strengthened audit readiness and compliance efficiency",
+            "Automated month-end close using Advanced Excel/Power Query, reducing cycle time from 5 to 3 days; built pricing and CapEx ROI/NPV models supporting an INR 12M expansion",
+            "Led cross-functional team of 11 members to reduce inventory days by 11% and establish consistent reporting cadence",
+            "Revamped reporting systems and enhanced forecast accuracy, strengthening cash flow visibility across business units"
         ],
-        technologies: ["Tally", "Excel", "SAP", "AI/ML Tools", "Financial Analytics"]
+        technologies: ["SAP FICO", "Tally", "Advanced Excel", "Power Query", "Financial Modeling"]
     },
     {
         title: "Accounting and Auditing Intern",
         company: "Vipul M Vora and Associates",
-        location: "Kuttch, India",
+        location: "Kutch, India",
         period: "March 2019 - March 2020",
         type: "Internship",
-        description: "Gained hands-on experience in financial reporting and compliance",
+        description: "Optimized financial audit procedures and compliance processes for SME clients",
         responsibilities: [
-            "Streamlined financial reporting and compliance processes, ensuring 100% regulatory adherence and reducing reporting errors by 20%",
-            "Developed financial optimization strategies, leading to a 15% reduction in compliance-related costs",
-            "Conducted comprehensive financial audits for diverse client portfolios",
-            "Prepared detailed audit reports and financial statements in compliance with regulatory standards"
+            "Optimized financial audit procedures for 15+ SMEs, reducing compliance risk by 20%",
+            "Executed cost control strategies, cutting client operational expenses by 15% via audit-led process improvements",
+            "Identified control gaps reducing tax exposure by INR 3M through detailed statutory audits",
+            "Prepared comprehensive audit reports and financial statements ensuring regulatory compliance"
         ],
-        technologies: ["Tally", "Excel", "Audit Software", "Financial Reporting Tools"]
+        technologies: ["Tally", "Excel", "Audit Software", "Tax Tools"]
     },
     {
         title: "Professional Apprentice",
-        company: "R.S.Patel and Company",
+        company: "R.S. Patel and Company",
         location: "Ahmedabad, India",
         period: "February 2017 - March 2019",
         type: "Apprenticeship",
-        description: "Completed professional training as part of Chartered Accountancy program",
+        description: "Completed professional training executing statutory audits for banking, NBFC, and corporate clients",
         responsibilities: [
-            "Led compliance management for 15+ high value portfolios, ensuring 98% client retention and driving a 40% increase in repeat business",
-            "Improved audit processes for municipal corporations and financial institutions, enhancing accuracy by 15% and reducing preparation time by 10%",
-            "Assisted in preparation of financial statements, tax returns, and audit reports",
-            "Developed strong relationships with clients through accurate, timely service delivery"
+            "Executed 35 statutory audits (Ind-AS/IFRS) for banking and NBFC clients; managed audits for 15+ clients, boosting retention by 40%",
+            "Standardized audit processes and workpapers, improving accuracy by 15% and coached 8 junior team members",
+            "Developed strong client relationships through accurate, timely service delivery and proactive communication",
+            "Assisted in preparation of financial statements, tax returns, and regulatory compliance reports"
         ],
-        technologies: ["Tally", "Excel", "Tax Software", "Audit Tools"]
+        technologies: ["Tally", "Finacle", "Excel", "Audit Tools", "Tax Software"]
     }
 ];
 
 export const skills = {
     technical: [
-        { name: "Financial Modeling", logo: "TrendingUp" },
-        { name: "Financial Analysis", logo: "BarChart3" },
-        { name: "Fraud Detection", logo: "Shield" },
-        { name: "Forecasting", logo: "LineChart" },
+        { name: "FP&A", logo: "TrendingUp" },
+        { name: "Financial Modeling", logo: "BarChart3" },
+        { name: "DCF Valuation", logo: "DollarSign" },
+        { name: "Variance Analysis", logo: "LineChart" },
         { name: "Budget Management", logo: "Wallet" },
-        { name: "Risk Assessment", logo: "AlertTriangle" }
+        { name: "Scenario Planning", logo: "GitBranch" }
     ],
 
     languages: [
-        { name: "US GAAP", logo: "FileText" },
+        { name: "GAAP", logo: "FileText" },
         { name: "IFRS", logo: "Globe" },
-        { name: "Ind AS", logo: "BookOpen" },
-        { name: "Tax Codes", logo: "FileBarChart" },
-        { name: "SOX Compliance", logo: "FileCheck" }
+        { name: "Ind-AS", logo: "BookOpen" },
+        { name: "NIH Compliance", logo: "Shield" },
+        { name: "SOX Controls", logo: "FileCheck" }
     ],
 
     frameworks: [
-        { name: "Valuation Methods", logo: "DollarSign" },
-        { name: "M&A Due Diligence", logo: "Handshake" },
-        { name: "Cost Accounting", logo: "Calculator" },
+        { name: "CAPM & WACC", logo: "Activity" },
+        { name: "ROI/NPV Analysis", logo: "Calculator" },
+        { name: "Driver-based Forecasting", logo: "TrendingUp" },
         { name: "Internal Controls", logo: "Lock" },
-        { name: "Audit Procedures", logo: "ClipboardCheck" }
+        { name: "Forensic Auditing", logo: "Search" }
     ],
 
     tools: [
@@ -171,31 +189,37 @@ export const skills = {
         { name: "Power BI", logo: "BarChart4" },
         { name: "Tableau", logo: "PieChart" },
         { name: "Advanced Excel", logo: "Sheet" },
-        { name: "Python", logo: "Code" }
+        { name: "R (tidyverse)", logo: "Code" }
     ],
 
     software: [
-        { name: "Oracle", logo: "Server" },
-        { name: "SAP", logo: "Boxes" },
-        { name: "Excel", logo: "Sheet" },
-        { name: "PowerPoint", logo: "Presentation" },
-        { name: "Word", logo: "FileText" },
-        { name: "Outlook", logo: "Mail" }
+        { name: "Oracle Cloud", logo: "Cloud" },
+        { name: "SAP FICO", logo: "Boxes" },
+        { name: "Bloomberg Terminal", logo: "Monitor" },
+        { name: "REDCap", logo: "FileSpreadsheet" },
+        { name: "Power Query", logo: "Workflow" },
+        { name: "Tally", logo: "Calculator" }
     ],
 
     specialized: [
-        { name: "Tally", logo: "Calculator" },
-        { name: "Finacle", logo: "Building2" },
-        { name: "Grant Management", logo: "ClipboardList" },
-        { name: "Compliance Systems", logo: "CheckSquare" },
-        { name: "Audit Software", logo: "FileSearch" },
-        { name: "Tax Software", logo: "Receipt" }
+        { name: "Grant Accounting", logo: "ClipboardList" },
+        { name: "Fraud Detection", logo: "AlertTriangle" },
+        { name: "EDA & Data Cleaning", logo: "Filter" },
+        { name: "KPI Dashboards", logo: "LayoutDashboard" },
+        { name: "Control Matrix Design", logo: "Grid3x3" },
+        { name: "Audit Procedures", logo: "ClipboardCheck" }
     ],
 
     certifications: [
         {
+            name: "Google Data Analytics Specialization",
+            issuer: "Google",
+            date: "September 2025",
+            focus: "SQL, R, Exploratory Data Analysis, Data Visualization, Data Cleaning"
+        },
+        {
             name: "Certified Fraud Examiner (CFE)",
-            issuer: "Association of Certified Fraud Examiners",
+            issuer: "Association of Certified Fraud Examiners (ACFE)",
             date: "March 2023",
             focus: "Financial Frauds and Detection, Forensic Auditing, Criminal Investigations"
         },
@@ -203,67 +227,114 @@ export const skills = {
             name: "Chartered Accountant",
             issuer: "Institute of Chartered Accountants of India",
             date: "December 2021",
-            focus: "Auditing, Taxation, Financial Management, Corporate Law"
+            focus: "Auditing, Taxation, Financial Management, Corporate Law, Ind-AS/IFRS"
+        },
+        {
+            name: "Data for Business Analysts Using Excel",
+            issuer: "Microsoft",
+            date: "July 2025",
+            focus: "Advanced Excel, Data Analysis, Business Intelligence"
+        },
+        {
+            name: "Business Analysis Fundamentals",
+            issuer: "Microsoft",
+            date: "June 2025",
+            focus: "Requirements Gathering, Process Improvement, Stakeholder Management"
         }
     ]
 };
 
 export const projects = [
     {
-        title: "AI-Based Fraud Detection System",
-        description: "Developed machine learning models to identify and prevent financial fraud, reducing fraud risk by 15% and improving security governance",
-        image: "/projects/fraud-detection.jpg",
-        technologies: ["Python", "Machine Learning", "Financial Analytics", "Risk Management"],
-        impact: "15% reduction in fraud risk",
+        title: "Marketing Strategy Deep Dive – Magna Tiles",
+        description: "Led 14-week primary/secondary research sprint analyzing customer segments, competitor promos, and price elasticity with GIS geo-maps, SWOT/STP, and unit-economics modeling",
+        image: "/projects/marketing-strategy.jpg",
+        technologies: ["Market Research", "GIS Mapping", "Financial Modeling", "Excel", "Survey Analysis"],
+        impact: "ROI modeling for 3 pricing scenarios + new product concept with 90-day GTM roadmap",
         achievements: [
-            "Implemented predictive analytics for fraud pattern recognition",
-            "Created real-time monitoring dashboard",
-            "Reduced false positives by 25%"
+            "Built comprehensive cost structure & break-even analysis",
+            "Modeled revenue/ROI for multiple pricing and promotion scenarios",
+            "Prioritized roadmap via RICE framework with risk mitigation strategies",
+            "Delivered executive deck with KPIs, pilot plan, and implementation roadmap"
         ]
     },
     {
-        title: "Financial Forecasting Models",
-        description: "Built comprehensive forecasting models for budget optimization, improving funding efficiency by 20% for research grants",
+        title: "Equity Valuation and Portfolio Optimization",
+        description: "Built and monitored equity portfolio over 4 months using Bloomberg Terminal with ratio analysis, DCF valuation with sensitivity analysis, and systematic stock screening",
+        image: "/projects/equity-valuation.jpg",
+        technologies: ["Bloomberg Terminal", "DCF Modeling", "CAPM", "Excel", "Portfolio Analysis"],
+        impact: "25% Sharpe ratio improvement vs S&P 500",
+        achievements: [
+            "Conducted comprehensive ratio analysis and DCF valuations",
+            "Applied CAPM and P/E analysis for systematic screening",
+            "Delivered final stock recommendations with sensitivity scenarios",
+            "Achieved superior risk-adjusted returns through optimization"
+        ]
+    },
+    {
+        title: "Driver-Based Forecasting Model",
+        description: "Developed comprehensive Excel + SQL forecasting template adopted by 7 research units, integrating automated data pulls and variance tracking",
         image: "/projects/forecasting.jpg",
-        technologies: ["Excel", "Financial Modeling", "Data Analytics", "Oracle"],
-        impact: "20% improvement in funding efficiency",
+        technologies: ["Excel", "SQL", "Financial Modeling", "Variance Analysis", "Automation"],
+        impact: "20% improvement in forecast accuracy",
         achievements: [
-            "Developed multi-year budget projection models",
-            "Automated monthly variance analysis",
-            "Created executive dashboards for decision-making"
+            "Built dynamic driver-based forecasting framework",
+            "Integrated automated data pulls from multiple systems",
+            "Streamlined monthly financial planning processes",
+            "Enabled real-time variance tracking and analysis"
         ]
     },
     {
-        title: "Cost Optimization Initiative",
-        description: "Led data-driven cost reduction program achieving 15% expense reduction and 8% profitability increase",
-        image: "/projects/cost-optimization.jpg",
-        technologies: ["SAP", "Tally", "Excel", "Process Improvement"],
-        impact: "15% cost reduction, 8% profit increase",
+        title: "Cost Efficiency Audit and Recommendation",
+        description: "Analyzed variance and production inefficiencies using SAP and regression modeling techniques, delivering automation improvement recommendations",
+        image: "/projects/cost-efficiency.jpg",
+        technologies: ["SAP", "Regression Analysis", "Process Improvement", "Excel"],
+        impact: "15% operating cost savings",
         achievements: [
-            "Identified key cost drivers through data analysis",
-            "Implemented automated expense tracking",
-            "Trained 50+ employees on cost management"
+            "Identified key cost drivers through statistical analysis",
+            "Mapped process inefficiencies and bottlenecks",
+            "Recommended targeted automation improvements",
+            "Delivered measurable operational cost reductions"
+        ]
+    },
+    {
+        title: "Risk Analytics Dashboard",
+        description: "Created comprehensive Power BI dashboard with real-time feeds, asset correlation heatmaps, and drawdown trackers for enhanced risk visualization",
+        image: "/projects/risk-analytics.jpg",
+        technologies: ["Power BI", "Financial Analytics", "Data Visualization", "Risk Modeling"],
+        impact: "12% increase in client retention through enhanced data visualization",
+        achievements: [
+            "Developed real-time risk monitoring capabilities",
+            "Built interactive correlation and drawdown analysis tools",
+            "Enhanced investment risk profile transparency",
+            "Improved advisor-client communication through visual insights"
         ]
     }
 ];
 
 export const communityEngagement = [
     {
-        title: "COVID-19 Hospital Volunteering",
-        period: "2020-2021",
-        description: "Contributed to frontline efforts during the COVID-19 pandemic by optimizing hospital operations, ensuring patient safety, and supporting critical care workflows in a high-pressure environment.",
-        impact: "Enhanced coordination and resource management in crisis conditions"
+        title: "Student Business Ambassador, UIC",
+        period: "January 2025 - Present",
+        description: "Guided 50+ new students on career planning and networking, coordinated on-campus and virtual events driving 300+ student interactions",
+        impact: "Improved event attendance by 25% and strengthened UIC's business community engagement"
     },
     {
-        title: "Event Management & Strategic Partnerships",
-        period: "2022-2023",
-        description: "Led strategic planning and execution for Zomato's flagship Zomaland event, overseeing logistics, managing cross-functional teams, and coordinating partnerships with a leading company in the food delivery industry.",
-        impact: "Achieved significant increase in brand visibility and operational efficiency"
+        title: "Management Team, Women in Finance @ UIC",
+        period: "October 2024 - Present",
+        description: "Organized speaker events and industry panels to promote gender equity and career mentorship for 100+ women in finance. Built partnerships with alumni and partner firms",
+        impact: "Facilitated internship and networking opportunities while growing chapter visibility across UIC's finance community"
     },
     {
-        title: "Social Impact & Environmental Sustainability",
-        period: "2023-2024",
-        description: "Organized fundraising initiatives, raising significant resources for domestic aid and street animal welfare. Collaborated on environmental initiatives such as tree plantation and Clean India campaigns.",
-        impact: "Contributing to sustainable development and demonstrating corporate social responsibility"
+        title: "Fundraising & Sponsorship, TEDxUofIChicago",
+        period: "2024 - 2025",
+        description: "Secured $8,000+ in sponsorships by pitching partnerships to local businesses and corporate donors, managed sponsor relationships and deliverables",
+        impact: "Ensured event visibility and supported TEDx event execution through creative fundraising strategies"
+    },
+    {
+        title: "Sustainability Initiatives",
+        period: "2023 - 2024",
+        description: "Led 5+ Clean India drives, raised funding for 300+ animals, and planted 200+ trees through cross-community collaboration",
+        impact: "Contributing to environmental sustainability and demonstrating commitment to social responsibility"
     }
 ];

@@ -1,5 +1,5 @@
 "use client";
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, Phone, Instagram } from "lucide-react";
 import { personalInfo } from "@/data";
 
 export default function Footer() {
@@ -18,6 +18,11 @@ export default function Footer() {
             name: "Phone",
             url: personalInfo.socials.phone,
             icon: Phone
+        },
+        {
+            name: "Instagram",
+            url: personalInfo.socials.instagram,
+            icon: Instagram
         }
     ];
 
