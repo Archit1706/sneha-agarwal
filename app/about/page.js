@@ -140,9 +140,9 @@ function AboutSection() {
                     <p className="text-[#334443]/80 leading-relaxed text-lg mb-6">
                         {personalInfo?.about?.description}
                     </p>
-                    <div className="pt-6 border-t border-white/30">
+                    <div className="pt-1 border-t text-md border-white/30">
                         <p className="text-[#34656D] italic">
-                            "{personalInfo?.bio}"
+                            "{personalInfo?.about?.background}"
                         </p>
                     </div>
                 </div>
@@ -212,9 +212,11 @@ function EducationSection() {
                             <span className="inline-block text-sm px-4 py-2 bg-gradient-to-r from-[#34656D] to-[#334443] text-white rounded-full font-semibold">
                                 {edu.period}
                             </span>
-                            <p className="text-[#334443] mt-2 font-semibold">
-                                GPA: {edu.gpa}
-                            </p>
+                            {edu.gpa && (
+                                <p className="text-[#334443] mt-2 font-semibold">
+                                    GPA: {edu.gpa}
+                                </p>
+                            )}
                         </div>
                     </div>
 

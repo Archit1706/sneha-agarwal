@@ -1,5 +1,5 @@
 "use client";
-import { Download, Mail, Phone, MapPin } from "lucide-react";
+import { Download, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo, education, experiences, skills } from "@/data";
@@ -53,9 +53,9 @@ export default function Resume() {
                                 <h2 className="text-4xl font-bold text-[#334443] mb-2">
                                     {personalInfo.name}
                                 </h2>
-                                <p className="text-xl text-[#34656D] font-semibold mb-4">
+                                {/* <p className="text-xl text-[#34656D] font-semibold mb-4">
                                     {personalInfo.title}
-                                </p>
+                                </p> */}
                                 <div className="flex flex-wrap justify-center gap-6 text-[#334443]/70">
                                     <span className="flex items-center gap-2">
                                         <Mail className="w-5 h-5" />
@@ -68,6 +68,10 @@ export default function Resume() {
                                     <span className="flex items-center gap-2">
                                         <MapPin className="w-5 h-5" />
                                         {personalInfo.location}
+                                    </span>
+                                    <span className="flex items-center gap-2">
+                                        <Linkedin className="w-5 h-5" />
+                                        {/* {personalInfo.socials.linkedin} */} <a href={personalInfo.socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                                     </span>
                                 </div>
                             </div>

@@ -49,7 +49,7 @@ export default function Footer() {
                             {["Home", "About", "Experience", "Projects", "Resume", "Contact"].map((link) => (
                                 <li key={link}>
                                     <a
-                                        href={`/${link.toLowerCase()}`}
+                                        href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
                                         className="text-[#334443]/70 hover:text-[#34656D] transition-colors"
                                     >
                                         {link}

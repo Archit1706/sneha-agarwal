@@ -88,14 +88,14 @@ export default function Home() {
                     </h1>
                   </motion.div>
 
-                  <motion.p
+                  {/* <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="text-xl md:text-2xl text-[#34656D] font-medium"
                   >
                     {personalInfo.title}
-                  </motion.p>
+                  </motion.p> */}
 
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}

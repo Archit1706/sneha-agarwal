@@ -1,7 +1,9 @@
+import { CircleDollarSign, Activity, Files, LayoutDashboard, University, Users, Sprout } from "lucide-react";
+
 export const personalInfo = {
     name: "Sneha Agarwal",
-    tagline: "MBA & MS Finance Candidate | CA & CFE | Driving FP&A excellence through data-driven insights",
-    title: "Chartered Accountant | Certified Fraud Examiner | Finance Analytics Professional",
+    tagline: "MBA & Master of Science in Finance | CA & CFE | Driving FP&A excellence through data-driven insights",
+    title: "Financial Analytics Professional | Certified Fraud Examiner",
     email: "sagar39@uic.edu",
     phone: "312-399-8494",
     location: "Chicago, IL",
@@ -16,15 +18,17 @@ export const personalInfo = {
     bio: "MBA & MS Finance candidate (UIC) with CA and CFE credentials, bringing 3+ years of expertise in FP&A, reconciliations, and audit-ready controls across healthcare and manufacturing. Delivered +8% EBITDA growth, reduced month-end close cycles from 5 to 3 days, and managed $4M+ multi-grant budgets to NIH/GAAP standards. Google Data Analytics certified with strong SQL, R, and Excel capabilities to translate complex data into clear, defensible business decisions.",
 
     about: {
-        description: "As a Chartered Accountant and Certified Fraud Examiner pursuing dual master's degrees at UIC, I combine rigorous technical expertise with strategic financial leadership. My track record spans research finance in healthcare, manufacturing FP&A, and audit assurance—consistently delivering measurable improvements in operational efficiency, cost optimization, and fraud prevention. I'm passionate about leveraging advanced analytics (SQL, Power Query, R) to drive data-informed decision-making and strengthen financial controls across complex, multi-stakeholder environments.",
+        description: "Finance professional and Certified Fraud Examiner with 3+ years of experience at the intersection of financial analysis, data analytics, and strategic decision-making. I specialize in transforming complex datasets into actionable insights—whether building financial models, detecting fraud patterns, forecasting budgets, or optimizing operational efficiency.",
+        background: "My background spans healthcare research finance, manufacturing FP&A, and audit assurance, where I've delivered measurable results: 8% EBITDA growth, 40% reduction in close cycles, and management of $4M+ multi-grant budgets to regulatory standards. Currently pursuing dual master's degrees at UIC, I leverage advanced analytics (SQL, Power Query, R) and visualization tools to solve business problems across FP&A, compliance, fraud detection, and strategic finance. I'm passionate about using data to strengthen financial controls, drive growth, and empower data-informed decision-making in complex organizations.",
 
         interests: [
-            "FP&A & Financial Modeling",
-            "Data Analytics & Visualization",
-            "Fraud Detection & Forensic Accounting",
-            "Grant Accounting & Compliance",
-            "Budget Forecasting & Variance Analysis",
-            "Strategic Finance & Business Intelligence"
+            "Predictive Analytics & Financial Forecasting",
+            "AI/ML Applications in Finance",
+            "Data Visualization & Storytelling",
+            "Process Automation & Digital Transformation",
+            "Cross-Functional Business Partnering",
+            "Risk Management & Internal Controls",
+            "ESG & Sustainable Finance Metrics"
         ],
 
         hobbies: [
@@ -40,11 +44,11 @@ export const personalInfo = {
 
 export const education = [
     {
-        degree: "Masters of Business Administration and Masters of Science in Finance",
+        degree: "MBA in Management and Masters of Science in Finance",
         institution: "University of Illinois Chicago",
         location: "Chicago, IL",
-        period: "August 2024 - May 2026",
-        gpa: "In Progress",
+        period: "Aug 2024 - May 2026",
+        gpa: "",
         achievements: [
             "Dual Master's program combining management strategy and advanced finance",
             "Completed Google Data Analytics Specialization Certificate (SQL, R, EDA)",
@@ -55,9 +59,9 @@ export const education = [
     {
         degree: "Chartered Accountant",
         institution: "Institute of Chartered Accountants of India",
-        location: "Ahmedabad, India",
-        period: "2018 - December 2021",
-        gpa: "Professional Qualification",
+        location: "Gujarat, India",
+        period: "2018 - Dec 2021",
+        gpa: "",
         achievements: [
             "Completed rigorous 3-year professional accounting program with practical training",
             "Specialized in statutory auditing, taxation, financial management, and Ind-AS/IFRS",
@@ -68,9 +72,9 @@ export const education = [
     {
         degree: "Bachelor of Commerce in Accounting and Finance",
         institution: "Ahmedabad University",
-        location: "Ahmedabad, India",
-        period: "2015 - December 2018",
-        gpa: "Honors",
+        location: "Gujarat, India",
+        period: "2015 - Dec 2018",
+        gpa: "",
         achievements: [
             "Strong foundation in accounting principles, finance theory, and business management",
             "Academic excellence in financial accounting, corporate law, and cost accounting",
@@ -246,7 +250,8 @@ export const skills = {
 
 export const projects = [
     {
-        title: "Marketing Strategy Deep Dive – Magna Tiles",
+        title: "Marketing Strategy Deep Dive - Magna Tiles",
+        icon: CircleDollarSign,
         description: "Led 14-week primary/secondary research sprint analyzing customer segments, competitor promos, and price elasticity with GIS geo-maps, SWOT/STP, and unit-economics modeling",
         image: "/projects/marketing-strategy.jpg",
         technologies: ["Market Research", "GIS Mapping", "Financial Modeling", "Excel", "Survey Analysis"],
@@ -260,6 +265,7 @@ export const projects = [
     },
     {
         title: "Equity Valuation and Portfolio Optimization",
+        icon: Activity,
         description: "Built and monitored equity portfolio over 4 months using Bloomberg Terminal with ratio analysis, DCF valuation with sensitivity analysis, and systematic stock screening",
         image: "/projects/equity-valuation.jpg",
         technologies: ["Bloomberg Terminal", "DCF Modeling", "CAPM", "Excel", "Portfolio Analysis"],
@@ -273,6 +279,7 @@ export const projects = [
     },
     {
         title: "Driver-Based Forecasting Model",
+        icon: "",
         description: "Developed comprehensive Excel + SQL forecasting template adopted by 7 research units, integrating automated data pulls and variance tracking",
         image: "/projects/forecasting.jpg",
         technologies: ["Excel", "SQL", "Financial Modeling", "Variance Analysis", "Automation"],
@@ -286,6 +293,7 @@ export const projects = [
     },
     {
         title: "Cost Efficiency Audit and Recommendation",
+        icon: Files,
         description: "Analyzed variance and production inefficiencies using SAP and regression modeling techniques, delivering automation improvement recommendations",
         image: "/projects/cost-efficiency.jpg",
         technologies: ["SAP", "Regression Analysis", "Process Improvement", "Excel"],
@@ -299,6 +307,7 @@ export const projects = [
     },
     {
         title: "Risk Analytics Dashboard",
+        icon: LayoutDashboard,
         description: "Created comprehensive Power BI dashboard with real-time feeds, asset correlation heatmaps, and drawdown trackers for enhanced risk visualization",
         image: "/projects/risk-analytics.jpg",
         technologies: ["Power BI", "Financial Analytics", "Data Visualization", "Risk Modeling"],
@@ -315,24 +324,28 @@ export const projects = [
 export const communityEngagement = [
     {
         title: "Student Business Ambassador, UIC",
+        icon: University,
         period: "January 2025 - Present",
         description: "Guided 50+ new students on career planning and networking, coordinated on-campus and virtual events driving 300+ student interactions",
         impact: "Improved event attendance by 25% and strengthened UIC's business community engagement"
     },
     {
         title: "Management Team, Women in Finance @ UIC",
+        icon: Users,
         period: "October 2024 - Present",
         description: "Organized speaker events and industry panels to promote gender equity and career mentorship for 100+ women in finance. Built partnerships with alumni and partner firms",
         impact: "Facilitated internship and networking opportunities while growing chapter visibility across UIC's finance community"
     },
     {
         title: "Fundraising & Sponsorship, TEDxUofIChicago",
+        icon: CircleDollarSign,
         period: "2024 - 2025",
         description: "Secured $8,000+ in sponsorships by pitching partnerships to local businesses and corporate donors, managed sponsor relationships and deliverables",
         impact: "Ensured event visibility and supported TEDx event execution through creative fundraising strategies"
     },
     {
         title: "Sustainability Initiatives",
+        icon: Sprout,
         period: "2023 - 2024",
         description: "Led 5+ Clean India drives, raised funding for 300+ animals, and planted 200+ trees through cross-community collaboration",
         impact: "Contributing to environmental sustainability and demonstrating commitment to social responsibility"

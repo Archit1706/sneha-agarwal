@@ -70,7 +70,7 @@ export default function Projects() {
                                         <div className="flex flex-col md:flex-row gap-6">
                                             <div className="flex-shrink-0">
                                                 <div className="w-20 h-20 bg-gradient-to-br from-[#34656D] to-[#334443] rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg">
-                                                    {idx === 0 ? <Hospital className="w-10 h-10" /> : idx === 1 ? <PartyPopper className="w-10 h-10" /> : <Sprout className="w-10 h-10" />}
+                                                    <initiative.icon className="w-10 h-10" />
                                                 </div>
                                             </div>
                                             <div className="flex-1">
@@ -141,13 +141,8 @@ export default function Projects() {
 }
 
 function ProjectCard({ project, index }) {
-    const projectIcons = {
-        "AI-Based Fraud Detection System": ShieldCheck,
-        "Financial Forecasting Models": TrendingUp,
-        "Cost Optimization Initiative": DollarSign
-    };
 
-    const Icon = projectIcons[project.title] || TrendingUp;
+    const Icon = project.icon || TrendingUp;
 
     return (
         <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 h-full flex flex-col border border-[#FAEAB1]/50">
