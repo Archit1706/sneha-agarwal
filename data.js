@@ -9,7 +9,7 @@ export const personalInfo = {
     location: "Chicago, IL",
 
     socials: {
-        linkedin: "https://linkedin.com/in/snehaagarwal",
+        linkedin: "https://linkedin.com/in/agarwal-sneha08",
         instagram: "https://www.instagram.com/sneha_agarwal8",
         email: "mailto:sagar39@uic.edu",
         phone: "tel:312-399-8494"
