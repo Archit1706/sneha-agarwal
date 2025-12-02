@@ -13,18 +13,43 @@ export default function Contact() {
         message: ""
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitted(true);
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({ name: "", email: "", subject: "", message: "" });
-        }, 3000);
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const response = await fetch("https://getform.io/f/axozdrmb", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to send message");
+            }
+
+            setIsSubmitted(true);
+            setTimeout(() => {
+                setIsSubmitted(false);
+                setFormData({ name: "", email: "", subject: "", message: "" });
+            }, 5000);
+        } catch (err) {
+            setError("Something went wrong. Please try again.");
+            console.error("Form submission error:", err);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const contactInfo = [
@@ -173,6 +198,12 @@ export default function Contact() {
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-6">
+                                            {error && (
+                                                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                                                    {error}
+                                                </div>
+                                            )}
+
                                             <div>
                                                 <label className="block text-sm font-semibold text-[#334443] mb-2">
                                                     Name
@@ -183,7 +214,8 @@ export default function Contact() {
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     required
-                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors"
+                                                    disabled={isLoading}
+                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                                     placeholder="Your name"
                                                 />
                                             </div>
@@ -198,7 +230,8 @@ export default function Contact() {
                                                     value={formData.email}
                                                     onChange={handleChange}
                                                     required
-                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors"
+                                                    disabled={isLoading}
+                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                                     placeholder="your.email@example.com"
                                                 />
                                             </div>
@@ -213,7 +246,8 @@ export default function Contact() {
                                                     value={formData.subject}
                                                     onChange={handleChange}
                                                     required
-                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors"
+                                                    disabled={isLoading}
+                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                                     placeholder="What's this about?"
                                                 />
                                             </div>
@@ -228,17 +262,31 @@ export default function Contact() {
                                                     onChange={handleChange}
                                                     required
                                                     rows="5"
-                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors resize-none"
+                                                    disabled={isLoading}
+                                                    className="w-full px-4 py-3 rounded-lg border-2 border-[#FAEAB1] bg-white text-[#334443] focus:border-[#34656D] focus:outline-none transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                                                     placeholder="Tell me about your project or inquiry..."
                                                 ></textarea>
                                             </div>
 
                                             <button
                                                 type="submit"
-                                                className="w-full px-8 py-4 bg-gradient-to-r from-[#34656D] to-[#334443] text-white rounded-lg font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl flex items-center justify-center gap-2"
+                                                disabled={isLoading}
+                                                className="w-full px-8 py-4 bg-gradient-to-r from-[#34656D] to-[#334443] text-white rounded-lg font-semibold hover:scale-105 transform transition-all shadow-lg hover:shadow-2xl flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                                             >
-                                                <Send className="w-5 h-5" />
-                                                Send Message
+                                                {isLoading ? (
+                                                    <>
+                                                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                        </svg>
+                                                        Sending...
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <Send className="w-5 h-5" />
+                                                        Send Message
+                                                    </>
+                                                )}
                                             </button>
                                         </form>
                                     )}
@@ -298,4 +346,4 @@ export default function Contact() {
       `}</style>
         </>
     );
-} 
+}
