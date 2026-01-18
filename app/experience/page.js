@@ -169,9 +169,9 @@ function ExperienceCard({ exp, index }) {
                             <h3 className="text-2xl font-bold text-[#334443]">
                                 {exp.title}
                             </h3>
-                            <span className={`px-3 py-1 bg-gradient-to-r ${gradient} text-white text-xs font-semibold rounded-full`}>
+                            {/* <span className={`px-3 py-1 bg-gradient-to-r ${gradient} text-white text-xs font-semibold rounded-full`}>
                                 {exp.type}
-                            </span>
+                            </span> */}
                         </motion.div>
                         <p className="text-xl text-[#34656D] font-semibold mb-1">
                             {exp.company}
