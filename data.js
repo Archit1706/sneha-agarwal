@@ -130,26 +130,26 @@ export const experiences = [
         ],
         technologies: ["SAP FICO", "Tally", "Advanced Excel", "Power Query", "Financial Modeling"]
     },
-    {
-        title: "Accounting and Auditing Intern",
-        company: "Vipul M Vora and Associates",
-        location: "Kutch, India",
-        period: "March 2019 - March 2020",
-        type: "Internship",
-        description: "Optimized financial audit procedures and compliance processes for SME clients",
-        responsibilities: [
-            "Optimized financial audit procedures for 15+ SMEs, reducing compliance risk by 20%",
-            "Executed cost control strategies, cutting client operational expenses by 15% via audit-led process improvements",
-            "Identified control gaps reducing tax exposure by INR 3M through detailed statutory audits",
-            "Prepared comprehensive audit reports and financial statements ensuring regulatory compliance"
-        ],
-        technologies: ["Tally", "Excel", "Audit Software", "Tax Tools"]
-    },
+    // {
+    //     title: "Accounting and Auditing Intern",
+    //     company: "Vipul M Vora and Associates",
+    //     location: "Kutch, India",
+    //     period: "March 2019 - March 2020",
+    //     type: "Internship",
+    //     description: "Optimized financial audit procedures and compliance processes for SME clients",
+    //     responsibilities: [
+    //         "Optimized financial audit procedures for 15+ SMEs, reducing compliance risk by 20%",
+    //         "Executed cost control strategies, cutting client operational expenses by 15% via audit-led process improvements",
+    //         "Identified control gaps reducing tax exposure by INR 3M through detailed statutory audits",
+    //         "Prepared comprehensive audit reports and financial statements ensuring regulatory compliance"
+    //     ],
+    //     technologies: ["Tally", "Excel", "Audit Software", "Tax Tools"]
+    // },
     {
         title: "Professional Apprentice",
         company: "R.S. Patel and Company",
         location: "Ahmedabad, India",
-        period: "February 2017 - March 2019",
+        period: "February 2017 - March 2020",
         type: "Apprenticeship",
         description: "Completed professional training executing statutory audits for banking, NBFC, and corporate clients",
         responsibilities: [
