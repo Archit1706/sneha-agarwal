@@ -15,7 +15,7 @@ export const personalInfo = {
         phone: "tel:312-399-8494"
     },
 
-    bio: "MBA & MS Finance candidate (UIC) with CA and CFE credentials, bringing 3+ years of expertise in FP&A, reconciliations, and audit-ready controls across healthcare and manufacturing. Delivered +8% EBITDA growth, reduced month-end close cycles from 5 to 3 days, and managed $4M+ multi-grant budgets to NIH/GAAP standards. Google Data Analytics certified with strong SQL, R, and Excel capabilities to translate complex data into clear, defensible business decisions.",
+    bio: "MBA & MS Finance candidate (UIC) with CA and CFE credentials, bringing 5+ years of expertise in FP&A, reconciliations, and audit-ready controls across healthcare and manufacturing. Delivered +8% EBITDA growth, reduced month-end close cycles from 5 to 3 days, and managed $4M+ multi-grant budgets to NIH/GAAP standards. Google Data Analytics certified with strong SQL, R, and Excel capabilities to translate complex data into clear, defensible business decisions.",
 
     about: {
         description: "Finance professional and Certified Fraud Examiner with 3+ years of experience at the intersection of financial analysis, data analytics, and strategic decision-making. I specialize in transforming complex datasets into actionable insights—whether building financial models, detecting fraud patterns, forecasting budgets, or optimizing operational efficiency.",
@@ -60,7 +60,7 @@ export const education = [
         degree: "Chartered Accountant",
         institution: "Institute of Chartered Accountants of India",
         location: "Gujarat, India",
-        period: "2018 - Dec 2021",
+        period: "Jul 2016 - Dec 2021",
         gpa: "",
         achievements: [
             "Completed rigorous 3-year professional accounting program with practical training",
@@ -73,7 +73,7 @@ export const education = [
         degree: "Bachelor of Commerce in Accounting and Finance",
         institution: "Ahmedabad University",
         location: "Gujarat, India",
-        period: "2015 - Dec 2018",
+        period: "Jun 2015 - Dec 2018",
         gpa: "",
         achievements: [
             "Strong foundation in accounting principles, finance theory, and business management",
